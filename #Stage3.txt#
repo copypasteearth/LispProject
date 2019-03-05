@@ -1,0 +1,313 @@
+; SLIME 2016-04-19
+CL-USER> (integrate '1 'x)
+; 
+
+; Warning: These functions are undefined:
+;   EQUALS INTEGRAL
+; 
+X
+CL-USER> (integrate '1 'x)
+X
+CL-USER> (integrate '1 'y 1 4)
+3
+CL-USER> (integrate 'z 'z)
+(* 1/2 (EXPT Z 2))
+CL-USER> (integrate '(+ x 0) 'x)
+; Evaluation aborted on #<UNDEFINED-FUNCTION {5888D2CD}>.
+CL-USER> (integrate '(+ x 0) 'x)
+; 
+
+; Warning: This function is undefined:
+;   INTEGRAL
+; ; Evaluation aborted on #<UNDEFINED-FUNCTION {58A1068D}>.
+CL-USER> (integrate '(+ x 0) 'x)
+
+(+ (* 1/2 (EXPT X 2)) (* 0 X))
+CL-USER> (integrate '(+ x 0) 'x)
+; 
+
+; Warning: This function is undefined:
+;   OPERNAD-2
+; 
+NIL
+CL-USER> (integrate '(+ x 0) 'x)
+; 
+
+; Warning: This function is undefined:
+;   OPERNAD-2
+; ; Evaluation aborted on #<SIMPLE-TYPE-ERROR {586497D5}>.
+CL-USER> (integrate '1 'x)
+; Evaluation aborted on #<SIMPLE-TYPE-ERROR {5879BEBD}>.
+CL-USER> (integrate '1 'x)
+; 
+
+; Warning: These functions are undefined:
+;   OPERNAD-2 VARIBLE-P
+; ; Evaluation aborted on #<UNDEFINED-FUNCTION {5893CE6D}>.
+CL-USER> (integrate '1 'x)
+; 
+
+; Warning: This function is undefined:
+;   OPERNAD-2
+; ; Evaluation aborted on #<SIMPLE-TYPE-ERROR {58B41ACD}>.
+CL-USER> (integrate '1 'x)
+; Evaluation aborted on #<SIMPLE-TYPE-ERROR {593EAC15}>.
+CL-USER> (integrate '1 'x)
+; Evaluation aborted on #<SIMPLE-TYPE-ERROR {59605C25}>.
+CL-USER> (integrate '1 'x)
+
+
+; In: LAMBDA (F)
+
+;   (CONS (OPERAND-2 F))
+; Warning: Function called with one argument, but wants exactly two.
+; ; Evaluation aborted on #<KERNEL:SIMPLE-PROGRAM-ERROR {59905FCD}>.
+CL-USER> (integrate '1 'x)
+
+X
+CL-USER> (integrate '1 'x)
+X
+CL-USER> (integrate '1 'y 1 4)
+3
+CL-USER> (integrate 'z 'z)
+; Evaluation aborted on #<TYPE-ERROR {585B8B05}>.
+CL-USER> (integrate 'z 'z)
+(1/2)
+CL-USER> (integrate 'z 'z)
+; 
+
+; Warning: This function is undefined:
+;   F
+; ; Evaluation aborted on #<UNDEFINED-FUNCTION {58A0F1C5}>.
+CL-USER> (integrate 'z 'z)
+
+(1/2 (EXPT Z 2))
+CL-USER> (integrate '1 'x)
+X
+CL-USER> (integrate '1 'y 1 4)
+3
+CL-USER> (integrate 'z 'z)
+(1/2 (EXPT Z 2))
+CL-USER> (integrate '(+ x 0) 'x)
+Warning:  Ignoring unmatched close parenthesis at file position 4234.
+; Evaluation aborted on #<SIMPLE-TYPE-ERROR {59415C3D}>.
+CL-USER> (integrate '(+ x 0) 'x)
+
+; In: LAMBDA (F)
+
+;   (COND
+;     (EQ
+;      0
+;      #)
+;     0)
+; --> IF 
+; ==>
+;   (COND
+;     0)
+; Error: (during macroexpansion)
+; 
+; Error in function (:MACRO COND):  Cond clause should be a non-empty list: 0.
+; 
+;   ((EQ 1 #) (OPERAND-2 F))
+; Error: Illegal function call.
+; ; 
+
+; Warning: This variable is undefined:
+;   EQ
+; ; 
+
+; Warning: This function is undefined:
+;   T
+; ; Evaluation aborted on #<SIMPLE-TYPE-ERROR {595CB725}>.
+CL-USER> (integrate '(+ x 0) 'x)
+
+
+; In: LAMBDA (F)
+
+;   (EQ (OPERAND-1 F))
+; Warning: Function called with one argument, but wants exactly two.
+; 
+;   (EQ (OPERAND-2 F))
+; Warning: Function called with one argument, but wants exactly two.
+; ; Evaluation aborted on #<KERNEL:SIMPLE-PROGRAM-ERROR {59773F4D}>.
+CL-USER> (integrate '(+ x 0) 'x)
+
+((1/2 (EXPT X 2)) . 0)
+CL-USER> (integrate '(+ x 0) 'x)
+
+(+ (* 1/2 (EXPT X 2)) (* 0 X)) 
+((1/2 (EXPT X 2)) . 0)
+CL-USER> (integrate '(+ x 0) 'x)
+
+(+ (* 1/2 (EXPT X 2)) (* 0 X)) 
+((1/2 (EXPT X 2)))
+CL-USER> (integrate '(+ x 0) 'x)
+;   (CONS '* (SIMPLIFY #) (SIMPLIFY #))
+; Warning: Function called with three arguments, but wants exactly two.
+; 
+(+ (* 1/2 (EXPT X 2)) (* 0 X)) ; Evaluation aborted on #<KERNEL:SIMPLE-PROGRAM-ERROR {58A05FE5}>.
+CL-USER> (integrate '(+ x 0) 'x)
+
+(+ (* 1/2 (EXPT X 2)) (* 0 X)) 
+((* 1/2 ((EXPT X 2))))
+CL-USER> (integrate '(+ x 0) 'x)
+; 
+
+; Warning: This function is undefined:
+;   F
+; 
+(+ (* 1/2 (EXPT X 2)) (* 0 X)) ; Evaluation aborted on #<UNDEFINED-FUNCTION {5947A4AD}>.
+CL-USER> (integrate '(+ x 0) 'x)
+
+
+; In: LAMBDA (F)
+
+;   ('F)
+; Error: Illegal function call.
+; 
+(+ (* 1/2 (EXPT X 2)) (* 0 X)) ; Evaluation aborted on #<KERNEL:SIMPLE-PROGRAM-ERROR {595DBE1D}>.
+CL-USER> (integrate '(+ x 0) 'x)
+
+(+ (* 1/2 (EXPT X 2)) (* 0 X)) 
+((* 1/2 (EXPT X 2)))
+CL-USER> (integrate '(+ x 0) 'x)
+
+(+ (* 1/2 (EXPT X 2)) (* 0 X)) 
+((* 1/2 (EXPT X 2)) NIL)
+CL-USER> (integrate '(+ x 0) 'x)
+
+(+ (* 1/2 (EXPT X 2)) (* 0 X)) 
+((* 1/2 (EXPT X 2)))
+CL-USER> (integrate '(+ x 0) 'x)
+
+(+ (* 1/2 (EXPT X 2)) (* 0 X)) 
+((* 1/2 (EXPT X 2)))
+CL-USER> (integrate '(+ x 0) 'x)
+
+(+ (* 1/2 (EXPT X 2)) (* 0 X)) 
+(+ (* 1/2 (EXPT X 2)) NIL)
+CL-USER> (integrate '(+ x 0) 'x)
+
+(+ (* 1/2 (EXPT X 2)) (* 0 X)) 
+(* 1/2 (EXPT X 2))
+CL-USER> (integrate 'z 'z)
+
+(* 1/2 (EXPT Z 2)) 
+(* 1/2 (EXPT Z 2))
+CL-USER> (integrate '1 'y 1 4)
+3
+CL-USER> (integrate '1 'x)
+
+(* 1 X) 
+X
+CL-USER> (integrate '1 'x)
+
+(* 1 X) ; Evaluation aborted on #<TYPE-ERROR {5973327D}>.
+CL-USER> (integrate '1 'x)
+
+(* 1 X) 
+X
+CL-USER> (integrate '1 'y 1 4)
+3
+CL-USER> (integrate 'z 'z)
+
+(* 1/2 (EXPT Z 2)) 
+(* 1/2 (EXPT Z 2))
+CL-USER> (integrate '(+ x 0) 'x)
+
+(+ (* 1/2 (EXPT X 2)) (* 0 X)) 
+(* 1/2 (EXPT X 2))
+CL-USER> (integrate '(- x) 'x 1 3)
+; Evaluation aborted on #<SIMPLE-TYPE-ERROR {598CA9D5}>.
+CL-USER> (integrate '(- x) 'x 1 3)
+;   ((AND # #))
+; Error: Illegal function call.
+; 
+;   #'(LAMBDA (F) (BLOCK NEGATE-P #))
+; Note: Variable F defined but never used.
+; ; Evaluation aborted on #<KERNEL:SIMPLE-PROGRAM-ERROR {5849CE25}>.
+CL-USER> (integrate '(- x) 'x 1 3)
+
+"this is negation" ; Evaluation aborted on #<TYPE-ERROR {5892C6D5}>.
+CL-USER> (integrate '(- 1 x) 'x 1 3)
+; Evaluation aborted on #<SIMPLE-TYPE-ERROR {58B4D0BD}>.
+CL-USER> (integrate '(- 1 x) 'x 1 3)
+
+
+; In: LAMBDA (F V)
+
+;   (RESOLVE-NEGATION F)
+; Warning: Function called with one argument, but wants exactly two.
+; ; Evaluation aborted on #<SIMPLE-TYPE-ERROR {5890163D}>.
+CL-USER> (integrate '(- x) 'x 1 3)
+; Evaluation aborted on #<KERNEL:SIMPLE-PROGRAM-ERROR {589B44D5}>.
+CL-USER> (integrate '(- x) 'x 1 3)
+; Evaluation aborted on #<KERNEL:SIMPLE-PROGRAM-ERROR {58BE3F7D}>.
+CL-USER> (integrate '(- x) 'x 1 3)
+; 
+
+; Warning: This function is undefined:
+;   WORLD
+; ; Evaluation aborted on #<UNDEFINED-FUNCTION {58D6A4AD}>.
+CL-USER> (integrate '(- - x) 'x 1 3)
+; Evaluation aborted on #<UNDEFINED-FUNCTION {58E6391D}>.
+CL-USER> (integrate '(- - x) 'x 1 3)
+
+"positive" ; Evaluation aborted on #<TYPE-ERROR {582C434D}>.
+CL-USER> (integrate '(- x) 'x 1 3)
+
+"negative" ; Evaluation aborted on #<TYPE-ERROR {58386DB5}>.
+CL-USER> (integrate '(- x) 'x 1 3)
+
+
+; In: LAMBDA (F V)
+
+;   (INDEF-INTEGRAL (NEGATE-OPERAND F))
+; Warning: Function called with one argument, but wants exactly two.
+; ; Evaluation aborted on #<KERNEL:SIMPLE-PROGRAM-ERROR {58F23C0D}>.
+CL-USER> (integrate '(- x) 'x 1 3)
+
+-4
+CL-USER>  (integrate '(- - x) 'x 1 4)
+15/2
+CL-USER> (integrate '(- x) 'x)
+
+(- (* 1/2 (EXPT X 2))) 
+(- (* 1/2 (EXPT X 2)))
+CL-USER> (integrate '(- - x) 'x)
+
+(* 1/2 (EXPT X 2)) 
+(* 1/2 (EXPT X 2))
+CL-USER> (integrate '(- - - x) 'x)
+
+(- (* 1/2 (EXPT X 2))) 
+(- (* 1/2 (EXPT X 2)))
+CL-USER>  (integrate '(+ x (- x)) 'x)
+
+(+ (* 1/2 (EXPT X 2)) (- (* 1/2 (EXPT X 2)))) 
+(+ (* 1/2 (EXPT X 2)) (- (* 1/2 (EXPT X 2))))
+CL-USER> (integrate '(- (+ (- - x) x)) 'x 1 4)
+-15
+CL-USER>  (integrate '(+ (+ (- - x) (+ x 3)) 2) 'x 2 6)
+52
+CL-USER>  (integrate '(+ x (- x)) 'x)
+
+(+ (* 1/2 (EXPT X 2)) (- (* 1/2 (EXPT X 2)))) 
+0
+CL-USER> (integrate '(- x 5) 'x)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,102 @@
+; SLIME 2016-04-19
+CL-USER> (integrate '1 'x)
+(* 1 X)
+CL-USER> (integrate '1 'y 1 4)
+3
+CL-USER> (integrate 'z 'z)
+(* 1/2 (EXPT Z 2))
+CL-USER> (integrate '1 'x)
+X
+CL-USER> (integrate 'z 'z)
+(* 1/2 (EXPT Z 2))
+CL-USER> (integrate '1 'y 1 4)
+; Evaluation aborted on #<TYPE-ERROR {59D15F95}>.
+CL-USER> (integrate '1 'y 1 4)
+
+; In: 4
+
+;   (4)
+; Error: Illegal function call.
+; ; Evaluation aborted on #<KERNEL:SIMPLE-PROGRAM-ERROR {5827992D}>.
+CL-USER> (integrate '1 'y 1 4)
+; 
+
+; Warning: This function is undefined:
+;   OPERAND-2
+; ; Evaluation aborted on #<TYPE-ERROR {58C2D4B5}>.
+CL-USER> (integrate '1 'y 1 4)
+; 
+
+; Warning: This function is undefined:
+;   OPERAND-2
+; 
+3
+CL-USER> (integrate '1 'y 1 4)
+3
+CL-USER> (integrate 'z 'z)
+NIL
+CL-USER> (integrate 'z 'z)
+(* 1/2 (EXPT Z 2))
+CL-USER> (integrate '1 'x)
+X
+CL-USER> (integrate '1 'y 1 4)
+3
+CL-USER> (+ x 0)
+; Evaluation aborted on #<UNBOUND-VARIABLE {59C58D05}>.
+CL-USER> (integrate '(+ x 0) 'x)
+
+; In: LAMBDA (L V)
+
+;   ((INDEF-INTEGRAL #))
+; Error: Illegal function call.
+; 
+; Error: Illegal function call.
+; 
+;   #'(LAMBDA (L V) (BLOCK UNRAVEL-LIST #))
+; Note: Variable V defined but never used.
+; ; Evaluation aborted on #<KERNEL:SIMPLE-PROGRAM-ERROR {58F8FA35}>.
+CL-USER> (integrate '(+ x 0) 'x)
+;   ((INDEF-INTEGRAL # V))
+; Error: Illegal function call.
+; 
+; Error: Illegal function call.
+; 
+;   #'(LAMBDA (L V) (BLOCK UNRAVEL-LIST #))
+; Note: Variable V defined but never used.
+; ; Evaluation aborted on #<KERNEL:SIMPLE-PROGRAM-ERROR {591897C5}>.
+CL-USER> (integrate '(+ x 0) 'x)
+;   ((INDEF-INTEGRAL # V))
+; Error: Illegal function call.
+; 
+; Error: Illegal function call.
+; 
+;   #'(LAMBDA (L V) (BLOCK UNRAVEL-LIST #))
+; Note: Variable V defined but never used.
+; ; Evaluation aborted on #<KERNEL:SIMPLE-PROGRAM-ERROR {59F4A22D}>.
+CL-USER> (integrate '(+ x 0) 'x)
+
+(* 1/2 (EXPT X 2))
+CL-USER> (integrate '1 'y 1 4)
+3
+CL-USER> (integrate '1 'x)
+X
+CL-USER> (integrate 'z 'z)
+(* 1/2 (EXPT Z 2))
+CL-USER> (integrate '(- x) 'x 1 3)
+;   ((EQUAL # NEGATIVE-SYMBOL) (MAKE-NEGATIVE #))
+; Error: Illegal function call.
+; ; Evaluation aborted on #<SIMPLE-TYPE-ERROR {581F3885}>.
+CL-USER> (integrate '(- x) 'x 1 3)
+
+-4
+CL-USER> (integrate '(- - x) 'x 1 4)
+(integrate '(- x) 'x 1 3)
+;   ((NOT #) (EQUAL # NEGATIVE-SYMBOL))
+; Error: Illegal function call.
+; (integrate '(- x) 'x 1 3)
+
+; Error: Illegal function call.
+; (integrate '(- x) 'x 1 3)
+
+-4
+CL-USER> 

@@ -1,0 +1,67 @@
+%%% This file has been annotateed. All annotations begin with %%%
+%%% John Rowan
+%%% CSC 345 T,R 11-12:15
+
+
+; SLIME 2016-04-19
+CL-USER> (integrate '1 'x)                                    %%% Test 1
+X
+
+CL-USER>  (integrate '1 'y 1 4)                               %%% Test 2
+3
+
+CL-USER>  (integrate 'z 'z)                                   %%% Test 3
+(* 1/2 (EXPT Z 2))
+
+CL-USER> (integrate '(+ x 0) 'x)                              %%% Test 4
+(* 1/2 (EXPT X 2))
+
+CL-USER> (integrate '(- x) 'x 1 3)                            %%% Test 5
+-4
+
+CL-USER> (integrate '(- - x) 'x 1 4)                          %%% Test 6
+15/2
+
+CL-USER> (integrate '(- x) 'x)                                %%% Test 7
+(- (* 1/2 (EXPT X 2)))
+
+CL-USER>  (integrate '(- - x) 'x)                             %%% Test 8
+(* 1/2 (EXPT X 2))
+
+CL-USER>  (integrate '(- - - x) 'x)                           %%% Test 9
+(- (* 1/2 (EXPT X 2)))
+
+CL-USER>  (integrate '(+ x (- x)) 'x)                         %%% Test 10
+0
+
+CL-USER>  (integrate '(- (+ (- - x) x)) 'x 1 4)               %%% Test 11
+-15
+
+CL-USER> (integrate '(+ (+ (- - x) (+ x 3)) 2) 'x 2 6)        %%% Test 12
+52
+
+CL-USER> (integrate '(- x (expt x 3)) 'x)                     %%% Test 13
+(- (* 1/2 (EXPT X 2)) (* 1/4 (EXPT X 4)))
+
+CL-USER> (integrate '(- x (expt x 3)) 'x 2 5)                 %%% Test 14
+-567/4
+
+CL-USER> (integrate '(+ (+ x (- - - x)) (expt x 3)) 'x)       %%% Test 15
+(* 1/4 (EXPT X 4))
+
+CL-USER> (integrate '(+ (- x (- x)) (expt x 3)) 'x 2 3)       %%% Test 16
+85/4
+
+CL-USER>  (integrate '(expt x -1) 'x)                         %%% Test 17
+(LOG X)
+
+CL-USER> (integrate '(expt x -1) 'x 3 45)                     %%% Test 18
+2.7080503
+
+CL-USER> (integrate '(+ (+ x (- 5 x)) (expt x -1)) 'x)        %%% Test 19
+(+ (+ (* 1/2 (EXPT X 2)) (- (* 5 X) (* 1/2 (EXPT X 2)))) (LOG X))
+
+CL-USER> (integrate '(+ (+ x (- 5 x)) (expt x -1)) 'x 5 217)  %%% Test 20
+1063.7704
+
+%%%END

@@ -1,0 +1,252 @@
+; SLIME 2016-04-19
+; In: LAMBDA (F LO HI)
+
+;   ((AND # #) F)
+; Error: Illegal function call.
+; 
+;   #'(LAMBDA (F LO HI) (BLOCK DEF-INTEGRAL IF #))
+; Note: Variable F defined but never used.
+; 
+; Note: Variable LO defined but never used.
+; 
+; Note: Variable HI defined but never used.
+; ; 
+
+; Warning: This variable is undefined:
+;   IF
+; ; 
+
+; Warning: This function is undefined:
+;   MAKE-POWER
+; ; 
+
+; Warning: This function is undefined:
+;   MAKE-POWER
+; 
+
+; In: LAMBDA (F LO HI)
+
+;   ((AND # #) F)
+; Error: Illegal function call.
+; 
+;   #'(LAMBDA (F LO HI) (BLOCK DEF-INTEGRAL IF #))
+; Note: Variable F defined but never used.
+; 
+; Note: Variable LO defined but never used.
+; 
+; Note: Variable HI defined but never used.
+; ; 
+
+; Warning: This variable is undefined:
+;   IF
+; ; 
+
+; Warning: This function is undefined:
+;   MAKE-POWER
+; 
+
+; In: LAMBDA (F LO HI)
+
+;   ((AND # #) F)
+; Error: Illegal function call.
+; 
+;   #'(LAMBDA (F LO HI) (BLOCK DEF-INTEGRAL IF #))
+; Note: Variable F defined but never used.
+; 
+; Note: Variable LO defined but never used.
+; 
+; Note: Variable HI defined but never used.
+; ; 
+
+; Warning: This variable is undefined:
+;   IF
+; ; 
+
+; Warning: This function is undefined:
+;   MAKE-POWER
+; 
+
+; In: LAMBDA (F LO HI)
+
+;   ((AND LO HI) F)
+; Error: Illegal function call.
+; 
+;   #'(LAMBDA (F LO HI) (BLOCK DEF-INTEGRAL IF #))
+; Note: Variable F defined but never used.
+; 
+; Note: Variable LO defined but never used.
+; 
+; Note: Variable HI defined but never used.
+; ; 
+
+; Warning: This variable is undefined:
+;   IF
+; ; 
+
+; Warning: This function is undefined:
+;   MAKE-POWER
+; ; 
+
+; Warning: This variable is undefined:
+;   IF
+; 
+CL-USER> (integrate '3 'y)
+
+(* 3 Y)
+; 
+
+; Warning: This function is undefined:
+;   MAKE-POWER
+; ; 
+
+; Warning: This variable is undefined:
+;   IF
+; ; 
+
+; Warning: This function is undefined:
+;   MAKE-POWER
+; ; 
+
+; Warning: This variable is undefined:
+;   IF
+; ; 
+
+; Warning: This function is undefined:
+;   MAKE-POWER
+; ; 
+
+; Warning: This variable is undefined:
+;   IF
+; 
+CL-USER> (integrate '1 'y 1 4)
+; 
+
+; Warning: This function is undefined:
+;   MAKE-POWER
+; ; 
+
+; Warning: This variable is undefined:
+;   IF
+; ; Evaluation aborted on #<SIMPLE-TYPE-ERROR {596E851D}>.
+CL-USER> (integrate '1 'y 1 4)
+; 
+
+; Warning: This function is undefined:
+;   MAKE-POWER
+; ; 
+
+; Warning: This variable is undefined:
+;   IF
+; 
+3
+CL-USER> (integrate '1 'y 1 4)
+; 
+
+; Warning: This variable is undefined:
+;   IF
+; 
+3
+CL-USER> (integrate 'z 'z)
+; Evaluation aborted on #<SIMPLE-TYPE-ERROR {588ED67D}>.
+CL-USER> (integrate 'z 'z)
+; Evaluation aborted on #<SIMPLE-TYPE-ERROR {589E6D2D}>.
+CL-USER> (integrate 'z 'z)
+
+; In: LAMBDA (F LO HI)
+
+;   ((AND LO HI) F)
+; Error: Illegal function call.
+; ; 
+
+; Warning: This variable is undefined:
+;   IF
+; ; Evaluation aborted on #<KERNEL:SIMPLE-PROGRAM-ERROR {58B144CD}>.
+CL-USER> (integrate 'z 'z)
+; 
+
+; Warning: This variable is undefined:
+;   IF
+; ; 
+
+; Warning: This function is undefined:
+;   F
+; ; Evaluation aborted on #<UNDEFINED-FUNCTION {5930BCBD}>.
+CL-USER> (integrate 'z 'z)
+; Evaluation aborted on #<UNDEFINED-FUNCTION {5941EAED}>.
+CL-USER> (integrate 'z 'z)
+; 
+
+; Warning: This variable is undefined:
+;   IF
+; ; Evaluation aborted on #<SIMPLE-TYPE-ERROR {5961D815}>.
+CL-USER> (integrate 'z 'z)
+; 
+
+; Warning: This function is undefined:
+;   F
+; ; Evaluation aborted on #<SIMPLE-TYPE-ERROR {584A2155}>.
+CL-USER> (integrate 'z 'z)
+; 
+
+; Warning: This function is undefined:
+;   F
+; ; Evaluation aborted on #<SIMPLE-TYPE-ERROR {5864B7F5}>.
+CL-USER> (integrate '1 'y 1 4)
+; Evaluation aborted on #<UNDEFINED-FUNCTION {5875152D}>.
+CL-USER> (integrate '1 'y 1 4)
+; 
+
+; Warning: This function is undefined:
+;   F
+; ; Evaluation aborted on #<UNDEFINED-FUNCTION {58884BB5}>.
+CL-USER> (integrate '1 'y 1 4)
+; Evaluation aborted on #<UNDEFINED-FUNCTION {589401E5}>.
+CL-USER> (integrate '1 'y 1 4)
+; Evaluation aborted on #<UNDEFINED-FUNCTION {58A0D925}>.
+CL-USER> (integrate '1 'y 1 4)
+; 
+
+; Warning: This function is undefined:
+;   F
+; ; Evaluation aborted on #<UNDEFINED-FUNCTION {58B31CF5}>.
+CL-USER> (integrate '1 'y 1 4)
+
+3
+CL-USER> (integrate 'z 'z)
+; Evaluation aborted on #<SIMPLE-TYPE-ERROR {5940E97D}>.
+CL-USER> (integrate 'z 'z)
+
+(* 1/2 (EXPT Z 2)) ; Evaluation aborted on #<SIMPLE-TYPE-ERROR {5955FA85}>.
+CL-USER> (integrate '1 'y 1 4)
+
+(* 1 Y) 
+3
+CL-USER> (integrate '1 'y 1 4)
+
+(* 1 4) 
+3
+CL-USER> (integrate 'z 'z)
+
+(* 1/2 (EXPT NIL 2)) ; Evaluation aborted on #<SIMPLE-TYPE-ERROR {596DF735}>.
+CL-USER> (integrate '3 'y)
+
+(* 3 NIL) ; Evaluation aborted on #<SIMPLE-TYPE-ERROR {584E2B15}>.
+CL-USER> (integrate '1 'x)
+
+(* 1 NIL) ; Evaluation aborted on #<SIMPLE-TYPE-ERROR {585DBDFD}>.
+CL-USER> (integrate '1 'x)
+; Evaluation aborted on #<SIMPLE-TYPE-ERROR {58738A3D}>.
+CL-USER> (integrate '1 'x)
+; Evaluation aborted on #<SIMPLE-TYPE-ERROR {5896C875}>.
+CL-USER> (integrate '1 'y 1 4)
+
+(* 1 Y)
+CL-USER> (integrate '1 'y 1 4)
+3
+CL-USER> (integrate '1 'x)
+(* 1 X)
+CL-USER> (integrate 'z 'z)
+(* 1/2 (EXPT Z 2))
+CL-USER> (integrate 'z 'z 6 5)
+-11/2
+CL-USER> 

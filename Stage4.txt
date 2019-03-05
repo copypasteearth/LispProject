@@ -1,0 +1,81 @@
+; SLIME 2016-04-19
+CL-USER> (integrate '(- x 5) 'x)
+
+"subtraction" 
+"subtraction" ; Evaluation aborted on #<TYPE-ERROR {59BCC745}>.
+CL-USER> (integrate '(- x 5) 'x)
+
+(- (* 1/2 (EXPT X 2)) (* 5 X)) 
+(- (* 1/2 (EXPT X 2)) (* 5 X))
+CL-USER> (integrate '(expt x 4) 'x)
+
+NIL 
+NIL
+CL-USER> (integrate '(expt x -1) 'x)
+
+NIL 
+NIL
+CL-USER> (integrate '(- x (expt x 3)) 'x)
+
+(- (* 1/2 (EXPT X 2)) NIL) 
+(- (* 1/2 (EXPT X 2)) NIL)
+CL-USER> (integrate '(- x (expt x 3)) 'x)
+
+"power" 
+(- (* 1/2 (EXPT X 2)) "power") 
+(- (* 1/2 (EXPT X 2)) "power")
+CL-USER> (integrate '(expt x -1) 'x)
+
+"logarithm" 
+"logarithm" ; Evaluation aborted on #<TYPE-ERROR {58358F35}>.
+CL-USER> (integrate '(expt x 4) 'x)
+
+"power" 
+"power" ; Evaluation aborted on #<TYPE-ERROR {58422A25}>.
+CL-USER> (integrate '(expt x 4) 'x)
+
+"power" 
+"power" ; Evaluation aborted on #<TYPE-ERROR {58C13BCD}>.
+CL-USER> (integrate '(expt x -1) 'x)
+
+"logarithm" 
+"logarithm" ; Evaluation aborted on #<TYPE-ERROR {58CC5DED}>.
+CL-USER>  (integrate '(expt x -1) 'x)
+
+(LOG -1) 
+(LOG -1)
+CL-USER>  (integrate '(expt x -1) 'x)
+
+(LOG X) 
+(LOG X)
+CL-USER>  (integrate '(expt x -1) 'x 3 45)
+2.7080503
+CL-USER> (integrate '(expt x 4) 'x)
+
+(* 1/5 (EXPT X 5)) 
+(* 1/5 (EXPT X 5))
+CL-USER>  (integrate '(- x (expt x 3)) 'x)
+
+(- (* 1/2 (EXPT X 2)) (* 1/4 (EXPT X 4))) 
+(- (* 1/2 (EXPT X 2)) (* 1/4 (EXPT X 4)))
+CL-USER>  (integrate '(- x (expt x 3)) 'x 2 5)	
+-567/4
+CL-USER> (integrate '(+ (+ x (- 5 x)) (expt x -1)) 'x 5 217)
+1063.7704
+CL-USER>  (integrate '(+ (+ x (- 5 x)) (expt x -1)) 'x)
+
+(+ (+ (* 1/2 (EXPT X 2)) (- (* 5 X) (* 1/2 (EXPT X 2)))) (LOG X)) 
+(+ (+ (* 1/2 (EXPT X 2)) (- (* 5 X) (* 1/2 (EXPT X 2)))) (LOG X))
+CL-USER>  (integrate '(+ (+ x (- 5 x)) (expt x -1)) 'x)
+
+(+ (+ (* 1/2 (EXPT X 2)) (- (* 5 X) (* 1/2 (EXPT X 2)))) (LOG X)) 
+(+ (+ (* 1/2 (EXPT X 2)) (- (* 5 X) (* 1/2 (EXPT X 2)))) (LOG X))
+CL-USER> (integrate '(+ (+ x (- 5 x)) (expt x -1)) 'x 5 217)
+1063.7704
+CL-USER>  (integrate '(- x (expt x 3)) 'x 2 5)	
+-567/4
+CL-USER>  (integrate '(- x (expt x 3)) 'x)
+
+(- (* 1/2 (EXPT X 2)) (* 1/4 (EXPT X 4))) 
+(- (* 1/2 (EXPT X 2)) (* 1/4 (EXPT X 4)))
+CL-USER> 

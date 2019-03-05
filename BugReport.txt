@@ -1,0 +1,24 @@
+Bug Report
+Name: John Rowan
+Class: CSC345 T,R 11-12:15
+Due Date: 10/30/18
+
+===================================BUGS===============================
+
+1. I was having trouble simplifying the functions in the constructors,
+   so i made a simplify function that i call inside of the def-integral
+   function in the case that it returns the indefinite intefral.
+
+2. Since I only simplify the indefinite integral there could be a
+   performance issue when evaluating definite integrals because they
+   are not simplified, although the hit on performance should be
+   negligable.
+
+3. The current implementation doesnt currently do nested simplification
+   eg (+ (+ (* 1/2 (EXPT X 2)) (- (* 5 X) (* 1/2 (EXPT X 2)))) (LOG X))
+   because the second (* 1/2 (EXPT X 2)) function is nested inside a
+   subtraction function it is not simplified with the first occurance.
+   This was not a requirement in the design specification but I thought
+   it should be mentioned.
+
+==================================END=================================

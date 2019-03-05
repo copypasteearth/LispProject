@@ -1,0 +1,33 @@
+Technical Document
+
+Name: John Rowan
+Class: CSC 345 T,R 11-12:15
+Due Date: 10/30/18
+
+==============================FILES============================
+File: Project1.lisp
+Location: /media/sf_LinuxShared
+Attached: Yes
+
+File: test-data.lisp
+Location: /media/sf_LinuxShared
+Attached: Yes
+
+File: TechDoc.txt
+Location: /media/sf_LinuxShared
+Attached: Yes
+
+File: BugReport.txt
+Location: /media/sf_LinuxShared
+Attached: Yes
+
+File: mainRun.txt
+Location: /media/sf_LinuxShared
+Attached: Yes
+
+============================HOW TO RUN=========================
+
+1. load the file Project1.lisp
+2. start slime
+3. evaluate the buffer
+4. call function (integrate <function> <variable>)
